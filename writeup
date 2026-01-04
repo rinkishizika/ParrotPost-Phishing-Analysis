@@ -1,0 +1,49 @@
+📧 ParrotPost – Phishing Analysis
+
+Platform: TryHackMe
+Category: Social Engineering / Phishing Detection
+Difficulty: Beginner – Intermediate
+
+Introduction
+Phishing continues to be one of the most prevalent social engineering techniques used by attackers to compromise credentials, distribute malware, and gain unauthorized access.
+Rather than targeting technical vulnerabilities, phishing exploits human psychology to deceive users into taking harmful actions.
+
+In this exercise, ParrotPost: Phishing Analysis, I carefully examined a suspicious email using a combination of technical inspection and contextual clues to assess its legitimacy.
+The focus was on email header analysis, content review, and understanding attacker behavior—not on executing attacks.
+
+Objectives
+The primary goals of this exercise were to understand the typical structure of phishing emails, recognize common red flags within email content,
+analyze email headers to verify sender authenticity, identify spoofing and impersonation techniques, and ultimately enhance real-world phishing detection skills.
+
+Tools & Concepts Used
+The analysis involved email header inspection, sender and domain verification, evaluation of embedded URLs and hyperlinks,
+identification of social engineering indicators, and the application of logical reasoning and pattern recognition.
+
+Scenario Overview
+In this scenario, I was presented with an email purportedly sent by ParrotPost, a fictional email service provider.
+The email urged the recipient to take immediate action—a classic phishing tactic designed to induce panic and bypass cautious judgment.
+The task was to determine whether the email was legitimate or a malicious impersonation attempt.
+
+Step-by-Step Analysis
+The analysis began with a thorough review of the email content, where several warning signs were immediately apparent: the use of urgent language, 
+threats of account suspension, generic salutations, and prompts to interact via embedded links.
+
+Next, I examined the sender’s email address and noticed a discrepancy between the display name and the actual domain, with slight misspellings suggesting typosquatting—a clear impersonation tactic.
+
+Further investigation into the email headers revealed mismatches in the Return-Path, irregularities in the Received fields, and failures in SPF, DKIM, and DMARC authentication,
+confirming the email did not originate from an authorized ParrotPost server.
+
+Finally, I inspected the embedded links without clicking them and found that the visible link text did not match the actual destination URL,
+redirecting instead to an untrusted external domain—a strong indicator of credential harvesting.
+
+Key Phishing Indicators Identified
+Key red flags included the use of urgency to pressure the user, a mismatch between the displayed sender and the actual domain, impersonal greetings,
+suspicious hyperlinks leading to unfamiliar domains, and email header anomalies indicating failed authentication.
+
+Conclusion
+Based on the cumulative evidence, the email was definitively classified as a phishing attempt impersonating ParrotPost.
+This exercise highlighted how attackers leverage trust, urgency, and insufficient verification practices to carry out social engineering attacks.
+
+Lessons Learned
+Critical takeaways include the importance of never trusting an email based on appearance alone, always verifying sender domains and email headers,
+recognizing urgency as a major warning sign, understanding that HTTPS does not equate to safety, and acknowledging that human awareness remains a vital layer of defense against phishing.
